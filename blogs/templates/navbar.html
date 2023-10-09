@@ -1,0 +1,70 @@
+<!-- Navbar -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <!-- Container wrapper -->
+    <div class="container-fluid">
+        <!-- Navbar brand -->
+        <a class="navbar-brand" href="{% url 'blogs:inicio' %}">MYP</a>
+
+        <!-- Toggle button -->
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+                data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+            <i class="fas fa-bars text-light"></i>
+        </button>
+
+        <!-- Collapsible wrapper -->
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <!-- Left links -->
+            <ul class="navbar-nav me-auto d-flex flex-row mt-3 mt-lg-0">
+                <li class="nav-item text-center mx-2 mx-lg-1">
+                    <a class="nav-link active" aria-current="page" href="#!">
+                        <div>
+                            <i class="fas fa-home fa-lg mb-1"></i>
+                        </div>
+                        Inicio
+                    </a>
+                </li>
+
+                <li class="nav-item text-center mx-2 mx-lg-1">
+                    <a class="nav-link active" aria-current="page" href="{% url 'blogs:featured' %}">
+                        <div>
+                            <i class="fas fa-home fa-lg mb-1"></i>
+                        </div>
+                        Destacados
+                    </a>
+                </li>
+
+                <li class="nav-item dropdown">
+                    <<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                        aria-expanded="false">
+                    <i class="fa-solid fa-cart-shopping fa-beat"></i>
+                    Categorias
+                </a>
+                    <ul class="dropdown-menu">
+                        {% for category in categories %}
+                            <li><a class="dropdown-item"
+                                   href="{% url 'blogs:category' category.slug %}">{{ category.title }}</a></li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            </ul>
+            <!-- Left links -->
+
+            <!-- Search form -->
+            <form class="d-flex input-group w-auto" role="search" action="{% url 'blogs:search' %}" method="get">
+                <input name="search" type="search" class="form-control" placeholder="Buscar" aria-label="Buscar"/>
+                <button class="btn btn-primary" type="submit" data-mdb-ripple-color="dark">
+                    Buscar
+                </button>
+            </form>
+        </div>
+        <!-- Collapsible wrapper -->
+    </div>
+    <!-- Container wrapper -->
+</nav>
+
+<style>
+    .btn {
+        padding: .55rem 1.5rem .45rem;
+    }
+</style>
