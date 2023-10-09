@@ -5,4 +5,9 @@ env/
 venv/ 
 ENV/ 
 env.bak/ 
-venv.bak/ 
+venv.bak/
+
+
+#Congiguracion de ide
+.idea
+.gitignore
