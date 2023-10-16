@@ -1,0 +1,25 @@
+Content-Type: text/plain; charset="utf-8"
+MIME-Version: 1.0
+Content-Transfer-Encoding: 8bit
+Subject: Password reset on 127.0.0.1:8000
+From: webmaster@localhost
+To: prueba2@gmail.com
+Date: Mon, 16 Oct 2023 05:59:39 -0000
+Message-ID: <169743597930.9005.3524472942461917730@debian>
+
+
+You're receiving this email because you requested a password reset for your user account at 127.0.0.1:8000.
+
+Please go to the following page and choose a new password:
+
+http://127.0.0.1:8000/account/reset/Mg/bw4ynf-61f20378ef06ec19a09e6dc1a43c7183/
+
+Your username, in case you’ve forgotten: prueba2
+
+Thanks for using our site!
+
+The 127.0.0.1:8000 team
+
+
+
+-------------------------------------------------------------------------------
